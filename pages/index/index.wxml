@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="header">
+  <text class='title'>YUE XI</text>
+  <text class='sub-title'>约戏</text>
+  <image wx:if="{{userInfo.avatarUrl}}" class="user-avatar" src="{{userInfo.avatarUrl}}" ></image>
+</view>
+
+<view class="container">
+
+  <view class='bar'>
+      <navigator class="item c-hong" url="/pages/yuexi/index">约友登台</navigator>
+      <navigator class="item" url='/pages/xi-library/index'>戏剧仓库</navigator>
+      <navigator class="item">京艺联盟</navigator>
+      <navigator class="item">海量收藏</navigator>
+
+      <!-- <navigator class="item">戏我所爱</navigator>
+      <navigator class="item c-hong" hover-class="none" url="/pages/yuexi/index">激情约戏</navigator>
+      <navigator class="item">大戏收藏</navigator>
+      <navigator class="item">京艺联盟</navigator> -->
+  </view>
+
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" indicator-color="#fff" indicator-active-color="#ccc" circular="ture" >    
+      <block wx:for="{{slider}}" wx:key="k" wx:for-index="index" wx:for-item="img">    
+        <swiper-item>    
+          <image src="{{img.img_url}}" class="slide-image" mode="aspectFill"/>    
+        </swiper-item>    
+      </block>    
+  </swiper>   
+
+  <view class="xi-list">
+      <view class="bar">最新演出
+          <text>…</text>
+      </view>
+      <view class='list'>
+          <block wx:for="{{xi_list}}" wx:key="k" wx:for-item="vo">
+              <navigator url="/pages/index/xi-item?id={{vo.id}}" hover-class="navigator-hover">{{vo.time}} - {{vo.title}} - {{vo.theater}}</navigator>
+          </block>
+      </view>
+  </view>
+
+  <view class='playactor'>
+      <view class="bar">演员推荐
+         <text>…</text>
+      </view>
+
+      <block wx:for="{{playactor_list}}" wx:for-index="index" wx:key="k" wx:for-item="vo">
+        <block wx:if="{{index < 1}}">
+            <view class='list top'>
+              <image class='avatar' src='{{vo.avatar}}'></image>
+              <text class='info'>{{vo.info}}</text>
+            </view>
+        </block>
+        <block wx:else>
+            <view class='list'>
+              <image class='avatar' src='{{vo.avatar}}'></image>
+              <text class='info'>{{vo.info}}</text>
+            </view>
+        </block>
+            
+      </block>
+  </view>
+
+</view>

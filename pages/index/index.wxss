@@ -1,0 +1,100 @@
+/**index.wxss**/
+.bar{
+    padding:10px;
+    text-align: center;
+}
+.bar .item{
+    border: 1px solid #999;
+    background: #fff;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    color: #333;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 8px;
+    width: 58px;
+    box-shadow: 0 0 10px #d3d3d3 inset;
+    margin: 2px;
+}
+.bar .c-hong{
+  background-color: #FFDEA3;
+  box-shadow: 0 0 10px #fff inset;
+}
+.bar .item:first-letter{
+    font-size:24px;
+    margin: 0 30px 0 8px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 50px;
+  border-radius: 50%; 
+  float: right;
+}
+
+.userinfo-nickname {
+  color: blue;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.user-motto{
+  font-size: 15px;
+  color: #ff6600;
+}
+
+.swiper {
+  width: 90%;
+  margin: 0 auto;
+  height: 160px;
+  overflow: hidden;
+  background: #fff;
+  border: 2px solid #fff;  
+  box-shadow: 0 0 2px #333;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+.playactor{
+  font-size: 14px;
+  margin: 10px 20px;
+}
+.playactor .bar{
+  border-bottom: 1px solid #999;
+  text-align: left;
+  height: 20px;
+  line-height: 30px;
+  font-size: 16px;
+}
+.playactor .bar text{
+  float: right;
+  font-size: 20px;
+  padding: 0 10px;
+}
+.playactor .list{
+  padding: 10px 0;
+  display: block;
+  clear: both;
+}
+.playactor .top{
+  border-top:1px solid #fff;
+}
+.playactor .list .avatar{
+  float:left;
+  margin: 0 10px;
+  height: 100px;
+  width:100px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 1px #666;
+  border-radius: 5px;
+}
+.playactor .list .info{
+  color: #333;
+  font-size: 12px;
+}

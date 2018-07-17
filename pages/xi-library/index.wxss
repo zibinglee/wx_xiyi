@@ -1,0 +1,15 @@
+/* pages/xi-library/index.wxss */
+
+.header{
+    padding: 15px 0 5px 30px;
+    border-bottom: 1px solid #999;
+    box-shadow: 0 1px 1px #eee;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.header .title{
+    font-size: 16px;
+    margin-right: 10px;
+    text-shadow: 1px 1px 1px #868686;
+    color: #666;
+}

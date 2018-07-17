@@ -1,0 +1,71 @@
+/* pages/xi-library/add.wxss */
+view.block{
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+}
+button{
+  width: 100px;
+  display: inline-block;
+  margin: 0 5px;
+}
+.section{
+  padding: 8px 20px;
+}
+.finish text{
+  display: block;
+}
+input.word8{
+  width: 4em;
+  display: inline-block;
+}
+input.word20{
+  width: 10em;
+  display: inline-block;
+}
+label{
+  float: left;
+  line-height: 32px;
+  margin:5px 0 0;
+  padding-right: 5px;
+}
+button.red{
+  line-height:2;
+}
+view{
+  clear: both;
+}
+input[name="role_list"],.newrole{
+  width: 80%;
+  float: left;
+}
+.list-btn{
+    float:right;
+    padding: 0;
+    height: 24px;
+    width:24px;
+    border: 1px solid #777;
+    text-align: center;
+    line-height: 22px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #777;
+    box-shadow: 1px 1px 1px #fff;
+    background: #eee;
+    margin: 5px 0 0;
+    text-shadow: 1px 1px 1px #fff;
+    box-sizing: inherit;
+}
+.finish{
+  line-height: 1.6;
+  text-shadow: 1px 1px 1px #aaa; 
+}
+.finish .list{
+  margin: 5px 0 5px 1em;
+}
+textarea{
+  height: 3em;
+}
+b{
+   font-weight: bold; 
+}
