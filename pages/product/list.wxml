@@ -1,2 +1,27 @@
 <!--pages/product/list.wxml-->
-<text>pages/product/list.wxml</text>
+<include src="/pages/base/nav.wxml" />
+<view class="container">
+ <view class="view-list">
+      <view class="bar">
+      {{pagelabel}}
+      <navigator  open-type="redirect"  url="/pages/index/category?key={{pagelabel}}" hover-class="none">分类</navigator>
+      </view>
+      <view class='list-n'>
+          <block wx:for="{{products}}" wx:key="p" wx:for-item="vo">
+              <navigator  url="/pages/product/detail?id={{vo.id}}" hover-class="none">
+                <view class='row' hover-class="none">
+                  <image mode="scaleToFill" src="{{vo.icon}}"></image>
+                    <text class='text'>{{vo.title}}{{vo.title}}</text>
+                    <view class='text'>
+                      <block wx:for="{{vo.category}}" wx:key="c" wx:for-item="c_text">
+                      <text class="category">{{c_text}}</text>
+                      </block>
+                    </view>
+                    <text class='price'>￥{{vo.price}}</text>
+                  
+                </view>
+              </navigator>
+          </block>
+      </view>
+  </view>  
+</view>

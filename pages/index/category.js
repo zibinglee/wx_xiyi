@@ -1,4 +1,5 @@
 // pages/index/category.js
+const app = getApp()
 Page({
 
   /**
@@ -32,7 +33,15 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    var initdata = {
+      nav: app.globalData.nav,
+      route: "/" + this.route
+    };
+    //获取url里的参数key
+    if (this.options.key) {
+      initdata.c_label = this.options.key;
+    }
+    this.setData(initdata);
   },
 
   /**

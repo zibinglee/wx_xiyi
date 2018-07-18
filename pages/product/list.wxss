@@ -1,1 +1,3 @@
-/* pages/product/list.wxss */
+.view-list .bar navigator{
+  float: right;
+}

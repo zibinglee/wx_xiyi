@@ -1,9 +1,8 @@
 {
   "pages": [
+    "pages/product/list",
     "pages/index/category",
     "pages/index/index",
-    "pages/product/list",
-    "pages/product/detail",
     "pages/my/index"
   ],
   "window": {

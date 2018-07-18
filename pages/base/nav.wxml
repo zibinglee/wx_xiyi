@@ -1,6 +1,14 @@
-  <view class='nav'>
-     <navigator url="/pages/index/index" hover-class="none">首页</navigator>
-     <navigator url="/pages/index/category" hover-class="none">分类</navigator>
-     <navigator url="/pages/product/list" hover-class="none">产品</navigator>
-     <navigator url="/pages/my/index" hover-class="none">我的</navigator>
-  </view>
+<view class='nav'>
+<block wx:for="{{nav}}" wx:key="a" wx:for-item="vo">
+  <block wx:if="{{vo.url != route}}">
+    <navigator open-type="redirect" class="row" url="{{vo.url}}" hover-class="none">{{vo.text}}</navigator>
+  </block>
+  <block wx:else>
+    <text class="row">{{vo.text}}</text>
+  </block>
+</block>
+    <!-- <navigator url="/pages/index/index" hover-class="none">首页</navigator>
+    <navigator url="/pages/index/category" hover-class="none">分类</navigator>
+    <navigator url="/pages/product/list" hover-class="none">产品</navigator>
+    <navigator url="/pages/my/index" hover-class="none">我的</navigator> -->
+</view>

@@ -2,9 +2,9 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
 
     // 登录
     wx.login({
@@ -34,6 +34,12 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    nav: [
+      { "text": "首页", "url": "/pages/index/index" },
+      { "text": "分类", "url": "/pages/index/category" },
+      { "text": "产品", "url": "/pages/product/list" },
+      { "text": "我的", "url": "/pages/my/index" },
+    ]
   }
 })

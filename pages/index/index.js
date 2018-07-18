@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
     products: [
@@ -11,6 +10,7 @@ Page({
       { icon: "http://172.31.5.8/newadmin/Uploads/pic/banner/95/85/ios_icon1_1026859585_100_100.png", title: "八宝团寿香色对帔", price: 8000, category: ["老旦","老生", "帔"] },
     ],
     userInfo: {},
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -48,7 +48,6 @@ Page({
     //     ths.setData({ slider: res.data });
     //   }
     // });
-
   },
   onReady: function () {
     wx.getUserInfo({
@@ -59,7 +58,12 @@ Page({
         })
       }
     })
-    
+    var initdata = {
+      nav: app.globalData.nav,
+      route: "/" + this.route
+    };
+
+    this.setData(initdata);
   },
   //事件处理函数
 

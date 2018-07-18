@@ -1,2 +1,4 @@
 <!--pages/product/detail.wxml-->
+<include src="/pages/base/nav.wxml" />
 <text>pages/product/detail.wxml</text>
+

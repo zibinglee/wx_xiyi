@@ -4,6 +4,7 @@
   <text class='sub-title'>戏衣坊</text>
   <!-- <image wx:if="{{userInfo.avatarUrl}}" class="user-avatar" src="{{userInfo.avatarUrl}}" ></image> - ->
 </view>  -->
+<include src="/pages/base/nav.wxml" />
 
 <view class="container">
 <!--广告
@@ -20,13 +21,13 @@
           <text>…</text>
       </view>
       <view class='list-n'>
-          <block wx:for="{{products}}" wx:key="k" wx:for-item="vo">
-              <navigator url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">
+          <block wx:for="{{products}}" wx:key="p" wx:for-item="vo">
+              <navigator url="/pages/product/detail?id={{vo.id}}" hover-class="none">
                 <view class='row' hover-class="none">
                   <image mode="scaleToFill" src="{{vo.icon}}"></image>
-                    <text class='title'>{{vo.title}}</text>
-                    <view>
-                      <block wx:for="{{vo.category}}" wx:for-item="c_text">
+                    <text class='text'>{{vo.title}}{{vo.title}}</text>
+                    <view class='text'>
+                      <block wx:for="{{vo.category}}" wx:key="c" wx:for-item="c_text">
                       <text class="category">{{c_text}}</text>
                       </block>
                     </view>
@@ -36,31 +37,19 @@
               </navigator>
           </block>
       </view>
-      <!-- <view class='list-p'>
-          <block wx:for="{{products}}" wx:key="k" wx:for-item="vo">
-              <view class='row' hover-class="navigator-hover">
-                  <icon type="search" size="12" />
-                  <navigator url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">{{vo.title}}</navigator>
-                  <block wx:for="{{vo.category}}" wx:for-item="c_text">
-                    <navigator class='category' url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">{{c_text}}</navigator>
-                  </block>
-                  <text class='price'>￥{{vo.price}}</text>
-              </view>
-          </block>
-      </view> -->
   </view>    
 <view class="view-list">
       <view class="bar">产品推荐
           <text>…</text>
       </view>
       <view class='list-t'>
-          <block wx:for="{{products}}" wx:key="k" wx:for-item="vo">
-              <navigator url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">
+          <block wx:for="{{products}}" wx:key="p" wx:for-item="vo">
+              <navigator url="/pages/product/detail?id={{vo.id}}" hover-class="none">
                 <view class='row' hover-class="none">
                   <image mode="scaleToFill" src="{{vo.icon}}"></image>
                     <text class='title'>{{vo.title}}</text>
-                    <view>
-                      <block wx:for="{{vo.category}}" wx:for-item="c_text">
+                    <view class='text'>
+                      <block wx:for="{{vo.category}}" wx:key="c" wx:for-item="c_text">
                       <text class="category">{{c_text}}</text>
                       </block>
                     </view>
@@ -71,5 +60,4 @@
           </block>
       </view>
   </view> 
-  <include src="/pages/base/nav.wxml"/>
 </view>

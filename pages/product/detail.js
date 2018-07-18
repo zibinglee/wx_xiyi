@@ -1,4 +1,5 @@
 // pages/product/detail.js
+const app = getApp()
 Page({
 
   /**
@@ -19,7 +20,15 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    var initdata = {
+      nav: app.globalData.nav,
+      route: "/" + this.route
+    };
+    //获取url里的参数key
+    if (this.options.id) {
+      initdata.proid = this.options.id;
+    }
+    this.setData(initdata);
   },
 
   /**

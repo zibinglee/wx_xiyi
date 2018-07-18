@@ -1,20 +1,23 @@
+<include src="/pages/base/nav.wxml" />
 <view class="container">
  <view class="view-list">
       <view class="bar">所有分类</view>
       <view class='list-p'>
-          <block wx:for="{{category}}"  wx:for-item="vo">
+          <block wx:for="{{category}}" wx:key="a" wx:for-item="vo">
               <view class='row' hover-class="none">
                   <text class='label'>{{vo.parent}}</text>
-                  
-                  <!-- <navigator url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">{{vo.title}}</navigator> -->
                   <view class='childs'>
-                  <block wx:for="{{vo.child}}" wx:for-item="label">
-                    <navigator class='category' url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">{{label}}</navigator>
+                  <block wx:for="{{vo.child}}" wx:key="b" wx:for-item="label">
+                  <block wx:if="{{label==c_label}}">
+                    <navigator open-type="redirect" class='category hight' url="/pages/product/list?key={{label}}" hover-class="none">{{label}}</navigator>
+                  </block>
+                  <block wx:else>
+                    <navigator type="redirect" class='category' url="/pages/product/list?key={{label}}" hover-class="none">{{label}}</navigator>
+                  </block>
                   </block>
                   </view>
               </view>
           </block>
       </view>
   </view>    
-  <include src="/pages/base/nav.wxml"/>
 </view>

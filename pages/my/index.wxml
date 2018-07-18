@@ -1,2 +1,4 @@
 <!--pages/my/index.wxml-->
+<include src="/pages/base/nav.wxml" />
 <text>pages/my/index.wxml</text>
+

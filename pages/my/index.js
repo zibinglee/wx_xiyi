@@ -1,4 +1,5 @@
 // pages/my/index.js
+const app = getApp()
 Page({
 
   /**
@@ -19,7 +20,12 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    var initdata = {
+      nav: app.globalData.nav,
+      route: "/" + this.route
+    };
+
+    this.setData(initdata);
   },
 
   /**
