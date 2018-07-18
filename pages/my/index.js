@@ -1,46 +1,32 @@
-// pages/yuexi/index.js
-const app = getApp()
+// pages/my/index.js
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    list: [],
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function () {
-    this.getlist();
+  onLoad: function (options) {
+  
   },
-
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo:true
-          })
-        }
-      });
-
-    
+  
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+  
   },
 
   /**
@@ -76,25 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-
-  getlist: function(){
-    var json = [
-      {
-        label: '2017-09-23 赤桑镇 石景山文化馆',
-        id: 234
-      },
-      {
-        label: "2017-09-24 遇皇后 海淀文化馆",
-        id: 235
-      },
-      {
-        label: "2017-09-25 打龙袍 东城文化馆",
-        id: 236
-      }
-    ];
-    this.setData({
-      list: json
-    })
   }
 })

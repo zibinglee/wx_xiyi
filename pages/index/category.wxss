@@ -1,0 +1,16 @@
+.view-list .list-p .row{
+  border: none;
+}
+.view-list .list-p .label{
+  padding: 10rpx 30rpx;
+  float: left;
+  margin-bottom: 20rpx;
+  border-bottom: 2px solid skyblue;
+}
+.view-list .list-p .childs{
+  clear: both;
+}
+.view-list .list-p .category{
+  display: inline-block;
+  padding: 20rpx;
+}

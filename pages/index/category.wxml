@@ -1,0 +1,20 @@
+<view class="container">
+ <view class="view-list">
+      <view class="bar">所有分类</view>
+      <view class='list-p'>
+          <block wx:for="{{category}}"  wx:for-item="vo">
+              <view class='row' hover-class="none">
+                  <text class='label'>{{vo.parent}}</text>
+                  
+                  <!-- <navigator url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">{{vo.title}}</navigator> -->
+                  <view class='childs'>
+                  <block wx:for="{{vo.child}}" wx:for-item="label">
+                    <navigator class='category' url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">{{label}}</navigator>
+                  </block>
+                  </view>
+              </view>
+          </block>
+      </view>
+  </view>    
+  <include src="/pages/base/nav.wxml"/>
+</view>

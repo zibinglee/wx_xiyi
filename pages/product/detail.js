@@ -1,4 +1,4 @@
-// pages/xi-library/index.js
+// pages/product/detail.js
 Page({
 
   /**

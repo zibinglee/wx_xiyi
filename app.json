@@ -1,11 +1,10 @@
 {
   "pages": [
+    "pages/index/category",
     "pages/index/index",
-    "pages/xi-library/add",
-    "pages/yuexi/create",
-    "pages/yuexi/index",
-    "pages/xi-library/index",
-    "pages/category/d"
+    "pages/product/list",
+    "pages/product/detail",
+    "pages/my/index"
   ],
   "window": {
     "backgroundTextStyle": "#ff4400",
