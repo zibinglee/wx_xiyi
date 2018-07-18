@@ -1,0 +1,6 @@
+  <view class='nav'>
+     <navigator hover-class="none">首页</navigator>
+     <navigator url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">分类</navigator>
+     <navigator url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">产品</navigator>
+     <navigator url="/pages/yuexi/index?id={{vo.id}}" hover-class="none">我的</navigator>
+  </view>

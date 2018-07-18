@@ -4,11 +4,12 @@
     "pages/xi-library/add",
     "pages/yuexi/create",
     "pages/yuexi/index",
-    "pages/xi-library/index"
+    "pages/xi-library/index",
+    "pages/category/d"
   ],
   "window": {
     "backgroundTextStyle": "#ff4400",
-    "navigationBarBackgroundColor": "#333",
+    "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "虎先生戏衣坊",
     "navigationBarTextStyle": "#fff"
   }

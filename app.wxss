@@ -1,94 +1,127 @@
 /**app.wxss**/
 page{
-  background: #ddd;
-  padding-bottom: 20px;
+  background: #fff;
+  padding-bottom: 100rpx;
   font-family:tahoma,arial,"microsoft yahei";
-  text-shadow: 1px 1px 1px #fff; 
-  font-size: 14px;
+  text-shadow: 1rpx 1rpx 1rpx #eee;  
+  font-size: 18rpx;
 }
 .header{
-    padding: 15px 0 5px 30px;
-    border-bottom: 1px solid #999;
-    box-shadow: 0 1px 1px #fff;
+  background: #000;
+    padding: 40rpx 0 10rpx 60rpx;
+    border-bottom: 1rpx solid #999;
+    box-shadow: 0 1rpx 1rpx #fff;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 10rpx;
+    color: #fff;
 }
 .header .title{
-    font-size: 40px;
-    margin-right: 10px;
+    font-size: 60rpx;
+    margin-right: 10rpx;
+}
+.header .sub-title{
+  font-size: 32rpx;
 }
 .header .userinfo-avatar{
   display: inline-block;
   position: absolute;
-  top: 5px;
-  right: 20px;  
-  height: 50px;
-  width: 50px;
+  top: 5rpx;
+  right: 20rpx;  
+  height: 50rpx;
+  width: 50rpx;
 }
 
 .header .add-btn{
     float:right;
-    height: 24px;
-    width:24px;
-    border: 1px solid #777;
+    height: 24rpx;
+    width:24rpx;
+    border: 1rpx solid #777;
     position:  absolute;
-    top:10px;
-    right:20px;
+    top:10rpx;
+    right:20rpx;
     text-align: center;
-    line-height: 22px;
+    line-height: 22rpx;
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 24rpx;
     color: #777;
-    box-shadow: 1px 1px 1px #fff;
+    box-shadow: 1rpx 1rpx 1rpx #fff;
 }
-
+.nav{
+  background: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80rpx;
+  border-top:2rpx solid #fff;
+  box-shadow: 0 0 15rpx #ccc;
+}
+.nav navigator{
+  background: #333;
+  display: inline-block;
+  width: 24%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  box-shadow: -2rpx 0 0 #fff;
+  margin-right:1%;
+  text-shadow: 1rpx 1rpx 1rpx #000;
+}
 
 .container {
   height: 100%;
   display:block;
   align-items:center;    
-  text-shadow: 1px 1px 1px #666;
+  /* text-shadow: 1rpx 1rpx 1rpx #666;  */
 } 
-.xi-list{
-  font-size: 14px;
-  margin: 10px 20px;
+.view-list{
+  clear: both;
+  font-size: 30rpx;
+  margin: 10rpx 20rpx;
 }
-.xi-list .bar{
-  border-bottom: 1px solid #999;
+.view-list .bar{
+  border-bottom: 1rpx solid #999; 
   text-align: left;
-  height: 20px;
-  line-height: 30px;
-  font-size: 16px;
+  height: 40rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  padding:20rpx 30rpx;
+  overflow: hidden;
 }
-.xi-list .bar text{
+.view-list .bar text{
   float: right;
-  font-size: 20px;
-  padding: 0 10px;
+  font-size: 32rpx;
+  padding: 0 20rpx;
 }
-.xi-list .list{
-  border-top:1px solid #fff;
-  padding: 10px 0;
+.view-list .list{
+   border-top:1rpx solid #eee; 
+  padding: 20rpx 0;
 }
-.xi-list navigator{
-  line-height: 30px;
-  margin: 0 10px;
-  padding: 2px 5px;
-  border-bottom: 1px dotted #bbb;
+.view-list .list .row{
+  line-height: 50rpx;
+  margin: 0 10rpx;
+  padding:20rpx 30rpx;
+  border-bottom: 1rpx dotted #bbb;
+}
+.view-list .list .row navigator{
+  display: inline-block;
 }
 .tip{
   /* color:#FFE1AA; */
   color:#c82829;
-  font-size: 14px;
+  font-size: 14rpx;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 10rpx;
 }
 input,textarea,select{
-  margin: 5px auto;
+  margin: 5rpx auto;
   background: #fff;
-  font-size: 14px;
-  padding: 2px 10px;
-  border: 1px solid #666;
-  text-shadow: 1px 1px 1px #ccc;
+  font-size: 14rpx;
+  padding: 2rpx 10rpx;
+  border: 1rpx solid #666;
+  text-shadow: 1rpx 1rpx 1rpx #ccc;
   width: 90%;
 }
 button{
@@ -100,7 +133,7 @@ button.red{
   color:#fff;
 }
 .hr{
-  border-bottom:1px solid #999; 
-  margin: 15px 0;
-  box-shadow: 0 1px 1px #fff;
+  border-bottom:1rpx solid #999; 
+  margin: 15rpx 0;
+  box-shadow: 0 1rpx 1rpx #fff;
 }
