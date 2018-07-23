@@ -1,4 +1,37 @@
-<!--pages/product/detail.wxml-->
+<!--pages/product/list.wxml-->
+<import src="../../wxParse/wxParse.wxml"/> 
 <include src="/pages/base/nav.wxml" />
-<text>pages/product/detail.wxml</text>
-
+<view class='container detail'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" indicator-color="#fff" indicator-active-color="#ccc" circular="ture" >    
+      <block wx:for="{{banner}}" wx:key="k" wx:for-index="index" wx:for-item="img">    
+        <swiper-item>    
+          <image src="{{img}}" class="slide-image" mode="widthFix" />    
+        </swiper-item>    
+      </block>    
+  </swiper> 
+  <view class='info'>
+    <view class='item title'>
+      {{title}}
+      <block wx:for="{{category}}" wx:key="c" wx:for-item="c_text">
+      <text class="category">{{c_text}}</text>
+      </block>
+    </view>
+    <view class='item'>
+      <text class='price'>￥{{price}}</text>
+      <text>库存：{{inventory}}件</text>
+    </view>
+  </view>
+  <view class='block'>
+    <view class='bar'>商品详情</view>
+    <view class='main'>
+      <block wx:for="{{images}}" wx:key="d" wx:for-item="img">
+        <image src="{{img}}" class="slide-image" mode="widthFix" />
+      </block>
+      
+      <view class="html">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+      </view>
+    </view>
+  </view>
+  
+</view>

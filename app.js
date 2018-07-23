@@ -35,11 +35,14 @@ App({
   },
   globalData: {
     userInfo: null,
-    nav: [
-      { "text": "首页", "url": "/pages/index/index" },
-      { "text": "分类", "url": "/pages/index/category" },
-      { "text": "产品", "url": "/pages/product/list" },
-      { "text": "我的", "url": "/pages/my/index" },
-    ]
+    nav: {
+      style:'',
+      data: [
+        { "text": "首页", "url": "/pages/index/index" },
+        { "text": "商品", "url": "/pages/product/list" },
+        { "text": "购物车", "url": "/pages/product/cart" },
+        { "text": "我的", "url": "/pages/my/index" },
+      ]
+    }
   }
 })

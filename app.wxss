@@ -4,7 +4,7 @@ page{
   padding-bottom: 100rpx;
   font-family:tahoma,arial,"microsoft yahei";
   text-shadow: 1rpx 1rpx 1rpx #eee;  
-  font-size: 18rpx;
+  font-size: 30rpx;
 }
 .header{
   background: #000;
@@ -75,6 +75,48 @@ page{
   background: #fff;
 }
 
+.nav-white,
+.nav-white text.row,
+.nav-white .row{
+  background: #fff;
+  color: #333;
+}
+.nav-white .row{
+  box-shadow: -2rpx 0 0 #ccc;
+}
+.nav-orange,
+.nav-orange text.row,
+.nav-orange .row
+{
+  background: #ffc273;
+}
+.nav-buy,
+.nav-buy text.row,
+.nav-buy .row{
+  /* background: #f76a37; */
+  background: #fff;
+  box-shadow: none;
+  color: #333;
+  text-shadow: 1rpx 1rpx 1rpx #eee;
+}
+.nav-buy .row{
+  width: auto;
+  padding: 0 30rpx;
+}
+.nav-buy .cart,
+.nav-buy .buy{
+  float: right;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  text-shadow: 1rpx 1rpx 1rpx #333;
+}
+.nav-buy .cart{
+  background: #FF9402;
+}
+.nav-buy .buy{
+  background: #FE560A;
+}
 .container {
   height: 100%;
   display:block;

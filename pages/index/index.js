@@ -4,10 +4,10 @@ const app = getApp()
 Page({
   data: {
     products: [
-      { icon: "http://172.31.5.8/newadmin/Uploads/pic/banner/76/84/ios_icon1_1026737684_100_100.png", title: "老旦白领紫老斗", price: 900, category:["老旦","褶子"] },
-      { icon: "http://172.31.5.8/newadmin/Uploads/pic/banner/55/09/ios_icon1_1214295509_100_100.png", title: "巡营老旦蟒", price: 8000, category: ["老旦", "蟒"] },
-      { icon: "http://172.31.5.8/newadmin/Uploads/pic/banner/95/85/ios_icon1_1026859585_100_100.png", title: "巡营老旦蟒", price: 8000, category: ["老旦", "蟒"] },
-      { icon: "http://172.31.5.8/newadmin/Uploads/pic/banner/95/85/ios_icon1_1026859585_100_100.png", title: "八宝团寿香色对帔", price: 8000, category: ["老旦","老生", "帔"] },
+      { id:1,icon: "http://172.31.5.8/newadmin/Uploads/pic/banner/76/84/ios_icon1_1026737684_100_100.png", title: "老旦白领紫老斗", price: 900, category:["老旦","褶子"] },
+      { id: 2,icon: "http://172.31.5.8/newadmin/Uploads/pic/banner/55/09/ios_icon1_1214295509_100_100.png", title: "巡营老旦蟒", price: 8000, category: ["老旦", "蟒"] },
+      { id: 3,icon: "http://172.31.5.8/newadmin/Uploads/pic/banner/95/85/ios_icon1_1026859585_100_100.png", title: "巡营老旦蟒", price: 8000, category: ["老旦", "蟒"] },
+      { id: 4,icon: "http://172.31.5.8/newadmin/Uploads/pic/banner/95/85/ios_icon1_1026859585_100_100.png", title: "八宝团寿香色对帔", price: 8000, category: ["老旦","老生", "帔"] },
     ],
     userInfo: {},
 
