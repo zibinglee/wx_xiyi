@@ -62,7 +62,10 @@ function trimHtml(html) {
 }
 
 
-function html2json(html, bindName) {
+function html2json(html, bindName, imgmode) {
+    if (!imgmode) {
+      imgmode = 'widthFix';
+    }
     //处理字符串
     html = removeDOCTYPE(html);
     html = trimHtml(html);
@@ -109,14 +112,14 @@ function html2json(html, bindName) {
                     var name = attr.name;
                     var value = attr.value;
                     if (name == 'class') {
-                        console.dir(value);
+                        console.dir("class:"+value);
                         //  value = value.join("")
                         node.classStr = value;
                     }
                     // has multi attibutes
                     // make it array of attribute
                     if (name == 'style') {
-                        console.dir(value);
+                        console.dir("style:"+value);
                         //  value = value.join("")
                         node.styleStr = value;
                     }
@@ -153,6 +156,7 @@ function html2json(html, bindName) {
                 }
                 imgUrl = wxDiscode.urlToHttpUrl(imgUrl, __placeImgeUrlHttps);
                 node.attr.src = imgUrl;
+                node.attr.mode = imgmode;
                 node.from = bindName;
                 results.images.push(node);
                 results.imageUrls.push(imgUrl);

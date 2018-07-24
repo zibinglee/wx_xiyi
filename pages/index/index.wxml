@@ -4,60 +4,39 @@
   <text class='sub-title'>戏衣坊</text>
   <!-- <image wx:if="{{userInfo.avatarUrl}}" class="user-avatar" src="{{userInfo.avatarUrl}}" ></image> - ->
 </view>  -->
+<import src="../../wxParse/wxParse.wxml"/> 
 <include src="/pages/base/nav.wxml" />
 
 <view class="container">
-<!--广告
-  <swiper wx:if="{{slider}}" class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" indicator-color="#fff" indicator-active-color="#ccc" circular="ture" >    
-      <block wx:for="{{slider}}" wx:key="k" wx:for-index="index" wx:for-item="img">    
-        <swiper-item>    
-          <image src="{{img.img_url}}" class="slide-image" mode="aspectFill"/>    
-        </swiper-item>    
-      </block>    
-  </swiper>   
--->
-  <view class="view-list">
-      <view class="bar">最新库存产品
-          <text>…</text>
+  <view class='recommend'>
+  
+    <block wx:for="{{recommend}}" wx:key="key_1" wx:for-index="index_1" wx:for-item="vo">
+      <view class='rec-time'>
+        <text class='rec-date'>{{vo.date}}</text>
+        <text class='rec-week'>{{vo.week}}</text>
       </view>
-      <view class='list-n'>
-          <block wx:for="{{products}}" wx:key="p" wx:for-item="vo">
-              <navigator url="/pages/product/detail?id={{vo.id}}" hover-class="none">
-                <view class='row' hover-class="none">
-                  <image mode="scaleToFill" src="{{vo.icon}}"></image>
-                    <text class='text'>{{vo.title}}{{vo.title}}</text>
-                    <view class='text'>
-                      <block wx:for="{{vo.category}}" wx:key="c" wx:for-item="c_text">
-                      <text class="category">{{c_text}}</text>
-                      </block>
-                    </view>
-                    <text class='price'>￥{{vo.price}}</text>
-                  
+      <block wx:for="{{vo.list}}" wx:key="key_2" wx:for-index="index_2" wx:for-item="row">
+        <view wx:if="{{row.type=='html'}}" class='rec-item'>
+              <template is="wxParse" data="{{wxParseData:row.data}}"/>
+        </view>
+        <view wx:elif="{{row.type=='prolist'}}" class='rec-item pro-list'>
+              <block wx:for="{{row.data}}" wx:key="key_3" wx:for-item="row2">
+                <view>{{row2.name}}
+                <navigator url="/pages/product/detail?id={{row2.id}}" hover-class="none">【购买】</navigator>
                 </view>
-              </navigator>
-          </block>
-      </view>
-  </view>    
-<view class="view-list">
-      <view class="bar">产品推荐
-          <text>…</text>
-      </view>
-      <view class='list-t'>
-          <block wx:for="{{products}}" wx:key="p" wx:for-item="vo">
-              <navigator url="/pages/product/detail?id={{vo.id}}" hover-class="none">
-                <view class='row' hover-class="none">
-                  <image mode="scaleToFill" src="{{vo.icon}}"></image>
-                    <text class='title'>{{vo.title}}</text>
-                    <view class='text'>
-                      <block wx:for="{{vo.category}}" wx:key="c" wx:for-item="c_text">
-                      <text class="category">{{c_text}}</text>
-                      </block>
-                    </view>
-                    <text class='price'>￥{{vo.price}}</text>
                   
-                </view>
-              </navigator>
-          </block>
-      </view>
-  </view> 
+              </block>
+        </view>
+        <view wx:elif="{{row.type=='prodetail'}}" class='rec-item pro-detail'>
+          <navigator url="/pages/product/detail?id={{row.data.id}}" hover-class="none">
+            <image src='{{row.data.img}}' mode="aspectFill"></image>
+            <view>{{row.data.name}}</view>
+            <view style="color:#ff6600;">￥{{row.data.price}}</view>
+          </navigator>
+        </view>
+      </block>
+    </block>
+  </view>
+
+  
 </view>
