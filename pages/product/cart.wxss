@@ -1,1 +1,32 @@
-/* pages/product/cart.wxss */
+
+ .view-list .list-t .category{
+  margin: 0;
+  margin-left: 10rpx;
+} 
+.number{
+  line-height: 50rpx;
+  height: 50rpx;
+}
+.number input{
+  width: 5rem;
+  display: inline-block;
+  float: left;
+  border: 1rpx solid #eee;
+  height: 50rpx;
+  background:#fff;
+  margin:0;
+  padding:0;
+  margin-right: 10rpx;
+}
+.delete{
+  display: inline-block;
+  background: #fff;
+  border: 1rpx solid #999;
+  width: 50rpx;
+  height:50rpx;
+  text-align: center;
+  float: right;
+}
+.view-list .list-t .title{
+  margin-top: 0;
+}

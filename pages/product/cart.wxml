@@ -1,2 +1,25 @@
-<!--pages/product/cart.wxml-->
-<text>pages/product/cart.wxml</text>
+<include src="/pages/base/nav.wxml" />
+<view class="container">
+ <view class="view-list">
+      <view class="bar">购物车 （8）
+      <text >编辑</text>
+      </view>
+         <view class='list-t'>
+          <block wx:for="{{products}}" wx:key="p" wx:for-item="vo">
+              
+                <view class='row' hover-class="none">
+                  <navigator url="/pages/product/detail?id={{vo.id}}" hover-class="none"><image mode="scaleToFill" src="{{vo.icon}}"></image></navigator>
+                  <navigator class='title' url="/pages/product/detail?id={{vo.id}}" hover-class="none">{{vo.title}}
+                      <block wx:for="{{vo.category}}" wx:key="c" wx:for-item="c_text">
+                      <text class="category">{{c_text}}</text>
+                      </block>
+                  </navigator>
+                  <text class='price'>￥{{vo.price}}</text>
+                  <view class='number'><input type='number'></input><text>件</text></view>
+                  <!-- <text class='delete'>删</text> -->
+                </view>
+              
+          </block>
+      </view>
+  </view>    
+</view>

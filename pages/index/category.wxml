@@ -1,7 +1,7 @@
 <include src="/pages/base/nav.wxml" />
 <view class="container">
  <view class="view-list">
-      <view class="bar">所有分类</view>
+      <view class="bar"><navigator open-type="redirect" class='' url="/pages/product/list" hover-class="none">所有分类</navigator></view>
       <view class='list-p'>
           <block wx:for="{{category}}" wx:key="a" wx:for-item="vo">
               <view class='row' hover-class="none">

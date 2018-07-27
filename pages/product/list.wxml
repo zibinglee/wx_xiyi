@@ -4,7 +4,7 @@
  <view class="view-list">
       <view class="bar">
       {{pagelabel}}
-      <navigator url="/pages/index/category?key={{pagelabel}}" hover-class="none">分类</navigator>
+      <navigator open-type="redirect" url="/pages/index/category?key={{pagelabel}}" hover-class="none">分类</navigator>
       </view>
       <view class='list-n'>
           <block wx:for="{{products}}" wx:key="p" wx:for-item="vo">
